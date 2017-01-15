@@ -1,0 +1,48 @@
+{
+  "scripts": {
+    "clean": "rm -rf lib_es6 lib",
+    "build_es6": "tsc --project tsconfig.lib_es6.json",
+    "es6_to_es5": "babel lib_es6 --out-dir lib",
+    "cp_d.ts_files_shallow": "copyfiles --up 1 'lib_es6/*.d.ts' lib",
+    "build": "npm run build_es6 && npm run es6_to_es5 && npm run cp_d.ts_files_shallow",
+    "prepublish": "npm run build"
+  },
+  "name": "react-streamed-text",
+  "version": "0.0.3",
+  "description": "Text-Streamed React component",
+  "main": "lib/ReactStreamedText.js",
+  "types": "lib/ReactStreamedText.d.ts",
+  "repository": "https://github.com/react-stream-libs/react-text-streamed-component.git",
+  "author": "devdoomari <devdoomari __at__ gmail dotttt commmm>",
+  "license": "Personal",
+  "peerDependencies": {
+    "@types/react": "^15.0.0",
+    "@types/react-dom": "^0.14.20",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-pixi": "^0.9.5",
+    "rxjs": "^5.0.3"
+  },
+  "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
+    "@kadira/storybook": "^2.35.3",
+    "@types/lodash": "^4.14.50",
+    "@types/pixi.js": "^4.3.1",
+    "@types/react": "^15.0.0",
+    "@types/react-dom": "^0.14.20",
+    "babel-cli": "^6.18.0",
+    "copyfiles": "^1.0.0",
+    "lodash": "^4.17.4",
+    "pixi.js": "^4.3.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-pixi": "^0.9.5",
+    "rxjs": "^5.0.3",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "dom-css": "^2.1.0"
+  }
+}
