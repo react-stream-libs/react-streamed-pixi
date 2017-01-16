@@ -12,8 +12,8 @@
     "build-storybook": "build-storybook"
   },
   "name": "react-streamed-pixi",
-  "version": "0.0.2",
-  "description": "Streamed React Pixi.js component",
+  "version": "0.0.3",
+  "description": "Streamed React Pixi.jscomponent",
   "main": "lib/ReactStreamedPixi.js",
   "types": "lib/ReactStreamedPixi.d.ts",
   "repository": "https://github.com/react-stream-libs/react-streamed-pixi.git",
