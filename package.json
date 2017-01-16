@@ -11,9 +11,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "name": "react-streamed-text",
-  "version": "0.0.4",
-  "description": "Text-Streamed React component",
+  "name": "react-streamed-pixi",
+  "version": "0.0.2",
+  "description": "Streamed React Pixi.js component",
   "main": "lib/ReactStreamedPixi.js",
   "types": "lib/ReactStreamedPixi.d.ts",
   "repository": "https://github.com/react-stream-libs/react-streamed-pixi.git",
