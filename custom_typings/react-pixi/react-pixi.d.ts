@@ -13,54 +13,41 @@ declare module 'react-pixi' {
     Point,
   } from 'pixi.js';
 
-  type StagePropsType = {
+  export type StagePropsType = {
     width: number, height: number,
     style?: CSSProperties, backgroundColor?: number,
     transparent?: boolean,
   };
-  class Stage extends Component<StagePropsType, void> {}
+  export class Stage extends Component<StagePropsType, void> {}
 
-  type TilingSpritePropsType = {
+  export type TilingSpritePropsType = {
     image: string, width: number, height: number,
   };
-  class TilingSprite extends Component<TilingSpritePropsType, void> {}
+  export class TilingSprite extends Component<TilingSpritePropsType, void> {}
 
-  type TextPropsType = {
+  export type TextPropsType = {
     text: string,
     x: number, y: number,
     style: CSSProperties,
     anchor: Point,
   };
-  class Text extends Component<TextPropsType, void> {}
+  export class Text extends Component<TextPropsType, void> {}
 
-  type DisplayObjectContainerPropsType = {
+  export type DisplayObjectContainerPropsType = {
     x: number, y: number,
   }
-  const DisplayObjectContainer: SFC<DisplayObjectContainerPropsType>;
-  class CustomPixiComponentClass<CustomProps, PixiComponent>
+  export const DisplayObjectContainer: SFC<DisplayObjectContainerPropsType>;
+  export class CustomPixiComponentClass<CustomProps, PixiComponent>
       extends React.Component<CustomProps, void> {
     displayObject: PixiComponent;
   }
-  interface CustomPixiComponentClassFactory<CustomProps, PixiComponent>
+  export interface CustomPixiComponentClassFactory<CustomProps, PixiComponent>
     extends ComponentFactory<CustomProps, CustomPixiComponentClass<CustomProps, PixiComponent>> {
   }
-  function CustomPIXIComponent<CustomProps, PixiComponent>(args: {
+  export function CustomPIXIComponent<CustomProps, PixiComponent>(args: {
     customDisplayObject(props: CustomProps): PixiComponent,
     customDidAttach?(displayObject: PixiComponent): void,
     customApplyProps(displayObject: PixiComponent, oldProps: CustomProps, newProps: CustomProps): void,
     customWillDetach?(displayObject: PixiComponent): void,
   }): CustomPixiComponentClassFactory<CustomProps, PixiComponent>
-
-  export = {
-    Stage,
-
-    TilingSprite,
-
-    DisplayObjectContainer,
-    CustomPixiComponentClass,
-    CustomPIXIComponent,
-
-    render,
-    unmountComponentAtNode,
-  }
 }

@@ -14,4 +14,10 @@ export type GraphicsProperties = {
   tabIndex?: number;
 
   rotation?: number;
+
+  skew?: Point;
 };
+
+export function applyGraphicsProperties(g: Graphics, props: GraphicsProperties) {
+
+}

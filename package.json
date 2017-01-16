@@ -5,7 +5,9 @@
     "es6_to_es5": "babel lib_es6 --out-dir lib",
     "cp_d.ts_files_shallow": "copyfiles --up 1 'lib_es6/*.d.ts' lib",
     "build": "npm run build_es6 && npm run es6_to_es5 && npm run cp_d.ts_files_shallow",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "name": "react-streamed-text",
   "version": "0.0.3",
@@ -25,7 +27,7 @@
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",
-    "@kadira/storybook": "^2.35.3",
+    "@kadira/storybook": "^2.21.0",
     "@types/lodash": "^4.14.50",
     "@types/pixi.js": "^4.3.1",
     "@types/react": "^15.0.0",

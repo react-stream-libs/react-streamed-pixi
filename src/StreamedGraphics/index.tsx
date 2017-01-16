@@ -1,12 +1,9 @@
-import * as React from 'react';
 import * as Rx from 'rxjs';
 import {
   Graphics,
-  Rectangle as PixiRectangle,
-  interaction,
 } from 'pixi.js';
 import * as _ from 'lodash';
-import ReactPixi = require('react-pixi');
+import * as ReactPixi from 'react-pixi';
 import {
   EventsHandlerType,
   hasInteractivity,
