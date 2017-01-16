@@ -1,6 +1,8 @@
 import StreamedGraphics, {
   GraphicsStreamType,
 } from './StreamedGraphics';
+import * as drawables from './StreamedGraphics/drawables';
+
 
 import * as reactPixi from 'react-pixi';
 
@@ -25,4 +27,5 @@ export const CustomPIXIComponent = reactPixi.CustomPIXIComponent;
 export {
   StreamedGraphics,
   GraphicsStreamType,
+  drawables,
 };
