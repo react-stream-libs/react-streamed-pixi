@@ -12,7 +12,7 @@
     "build-storybook": "build-storybook"
   },
   "name": "react-streamed-text",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Text-Streamed React component",
   "main": "lib/ReactStreamedPixi.js",
   "types": "lib/ReactStreamedPixi.d.ts",
