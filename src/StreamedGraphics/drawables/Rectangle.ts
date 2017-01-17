@@ -16,7 +16,7 @@ export default class Rectangle implements IDrawable {
   draw(g: Graphics) {
     const prevLineStyle = getLineStyle(g);
     setLineStyle(g, this.props.lineStyle);
-    g.beginFill(this.props.color);
+    g.beginFill(this.props.color, this.props.alpha || 1);
     g.drawRect(this.props.x, this.props.y, this.props.width, this.props.height);
     g.endFill();
     setLineStyle(g, prevLineStyle);
