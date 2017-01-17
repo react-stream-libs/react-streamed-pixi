@@ -7,4 +7,4 @@ export {
   IDrawable,
   Circle,
   Rectangle,
-}
+};

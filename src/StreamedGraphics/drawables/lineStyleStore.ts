@@ -4,11 +4,12 @@ export class GraphicsWithLineAlpha extends Graphics {
   lineAlpha: number;
 };
 
-export type LineStyle = {
-  color: number,
-  width: number,
-  alpha: number,
-}
+export type LineStyleType = {
+  color?: number,
+  width?: number,
+  alpha?: number,
+};
+
 export function getLineStyle(g: Graphics) {
   const graphicsWithLineAlpha = g as GraphicsWithLineAlpha;
   return {
@@ -18,6 +19,7 @@ export function getLineStyle(g: Graphics) {
   };
 }
 
-export function applyLineStyle(g: Graphics, lineStyle: LineStyle) {
-  g.lineStyle(lineStyle.width, lineStyle.color, lineStyle.alpha);
+export function setLineStyle(g: Graphics, lineStyle?: LineStyleType) {
+  const _lineStyle = lineStyle || {};
+  g.lineStyle(_lineStyle.width || 0, _lineStyle.color || 0, _lineStyle.alpha || 1);
 }
