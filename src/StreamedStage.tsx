@@ -15,6 +15,7 @@ export default class StreamedStage extends React.Component <PropsType, StateType
     this.state = {
       props: {
         width: 1, height: 1,
+        transparent: true,
       }
     }
   }
