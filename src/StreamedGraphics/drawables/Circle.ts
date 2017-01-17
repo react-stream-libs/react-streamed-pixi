@@ -13,7 +13,7 @@ export default class Circle implements IDrawable {
   constructor(args: CircleProps) {
     this.props = args;
   }
-  draw(g: Graphics) {
+  drawOn(g: Graphics) {
     const prevLineStyle = getLineStyle(g);
     setLineStyle(g, this.props.lineStyle);
     g.beginFill(this.props.color, this.props.alpha || 1);

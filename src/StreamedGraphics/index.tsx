@@ -36,19 +36,8 @@ export function subscribeDrawables(args: {
     .subscribe((drawables) => {
       // FIXME: implement diffing logic here (faster re-render)
       graphicsWithStream.clear();
-      _.forEach(drawables, drawable => drawDrawable({ graphicsWithStream, drawable }));
+      drawables.forEach(drawable => drawable.drawOn(graphicsWithStream));
     });
-}
-
-export function drawDrawable(args: {
-  graphicsWithStream: PixiGraphicsWithStream,
-  drawable: IDrawable,
-}) {
-  const {
-    graphicsWithStream,
-    drawable,
-  } = args;
-  drawable.draw(graphicsWithStream);
 }
 
 export function unsubscribeDrawables(args: {

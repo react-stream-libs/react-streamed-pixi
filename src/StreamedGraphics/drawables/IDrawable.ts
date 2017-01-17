@@ -3,7 +3,7 @@ import {
 } from 'pixi.js';
 
 interface IDrawable {
-  draw: (gl: Graphics) => void
+  drawOn: (gl: Graphics) => void
 };
 
 export default IDrawable;
