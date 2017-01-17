@@ -5,7 +5,7 @@ import { getLineStyle, setLineStyle, LineStyleType } from './lineStyleStore';
 export type RectangleProps = {
   x: number, y: number,
   width: number, height: number,
-  color: number,
+  color: number, alpha?: number,
   lineStyle?: LineStyleType,
 };
 export default class Rectangle implements IDrawable {
