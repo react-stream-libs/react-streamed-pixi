@@ -2,7 +2,6 @@ import * as Rx from 'rxjs';
 import {
   Graphics,
 } from 'pixi.js';
-import * as _ from 'lodash';
 import * as ReactPixi from 'react-pixi';
 import {
   EventsHandlerType,
