@@ -24,8 +24,8 @@
     "@types/react-dom": "^0.14.20",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-pixi": "^0.9.5",
-    "rxjs": "^5.0.3"
+    "reactive-pixi": "latest",
+    "rxjs": "^5.1.0"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",
@@ -41,8 +41,8 @@
     "pixi.js": "^4.3.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-pixi": "^0.9.5",
-    "rxjs": "^5.0.3",
+    "reactive-pixi": "latest",
+    "rxjs": "^5.1.0",
     "tslint": "^4.3.1",
     "typescript": "^2.1.5",
     "webpack": "^1.14.0"
